@@ -1,0 +1,5 @@
+.loading {
+    background: url(./../img/loading.gif);
+    background-size: cover;
+    background-blend-mode: lighten;
+}

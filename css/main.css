@@ -1,0 +1,143 @@
+/* ---------------------------------------------------------------------------------
+   BASIC EDIT
+ -------------------------------------------------------------------------------- */
+ /* set default spacing on every element to `0: none`*/
+* { padding: 0 ; margin: 0 ; box-sizing: border-box; }
+
+/* color set */
+@import url(./colorSet.css);
+
+/* set selection bg */
+::selection { background-color: var(--o1) ; color: #cacaca }
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--d01);
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ---------------------------------------------------------------------------------
+    MAIN LAYOUT
+ -------------------------------------------------------------------------------- */
+/* main msg_box */
+.msg_box {
+    background-color: var(--d0);
+    width: 50%;      
+    height: 100%;
+    margin: auto;
+}
+
+/* header */
+.msg_box > header {
+    background-color: var(--d1A);
+    height: 15%;
+    position: relative;
+    text-align: center;
+}
+.msg_box > header h1 {
+    user-select: none;
+    /* padding-block: 4%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--o3);
+}
+.msg_box > header h1 span { color: var(--l1) }
+
+/* form: message sending input */
+.msg_box > form {
+    height: 8%;
+    padding-block: 1%;
+    position: relative;
+    padding-inline: 1%;
+    user-select: none;
+}
+.msg_box input, .msg_box button {
+    transition: 0.2s ease-in;
+    font-size: 15px;
+    background-color: var(--d1A);
+    background-size: cover;
+    color: var(--lf);
+    padding-block: 1.5%;
+    padding-inline: 1%;
+    border: none;
+    border-radius: 4px;
+}
+.msg_box [name="name"] { width: 20% }
+.msg_box [name="message"] { width: 70% }
+
+.msg_box input:focus{
+    outline: 1px solid var(--o0);
+}
+
+/* button */
+.msg_box button {
+    transition: 0.2s ease-in-out;
+    width: 8%;
+}
+.msg_box button {
+    color: rgba(145, 145, 145, 0.8);
+    background-color: var(--o0);
+}
+.msg_box button:focus { outline: 1px solid var(--o0) }
+
+.msg_box .valid {
+    background-color: var(--o3);
+    color: whitesmoke;
+    cursor: pointer;
+}
+.msg_box .valid:focus { outline: 1px solid var(--o3) }
+
+/* footer */
+.msg_box > footer {
+    background-color: var(--d1A);
+    height: 12%;
+}
+
+/* ---------------------------------------------------------------------------------
+  main: message view
+ -------------------------------------------------------------------------------- */
+.msg_box > main {
+    background-color: var(--d0);
+    height: 65%;
+    border-bottom: 1px solid var(--d1A);
+    overflow-y: scroll;
+    padding-inline: 1%;
+}
+
+main::-webkit-scrollbar { background-color: var(--d01) ; width: 10px }
+main::-webkit-scrollbar-thumb { background-color: var(--o0) ; border-radius: 2px; }
+main::-webkit-scrollbar-thumb:hover { background-color: var(--o2) }
+main::-webkit-scrollbar-thumb:active { background-color: var(--o1) }
+
+/* message component */
+.msgComponent {
+    width: 48%;
+    margin-block: 2%;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+.R { margin-left: 52% }
+.R main {
+    background-color: var(--o1) !important; 
+    color: var(--l1) !important;
+}
+.msgComponent header {
+    padding-left: 1%;
+    font-size: 13px;
+    color: var(--o3);
+    margin-bottom: 1%;
+}
+.msgComponent main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #848484;
+    background-color: var(--d1);
+    border-radius: 4px;
+    padding-block: 3.5%;
+    margin-left: 1%;
+    padding-inline: 2%;
+    line-height: 1.5em;
+    overflow-wrap: break-word;
+}

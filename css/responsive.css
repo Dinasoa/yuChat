@@ -1,0 +1,125 @@
+@import url(main.css);
+@media screen and (max-width: 1200px) {
+    .msg_box {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .msg_box {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 928px) {
+    .msg_box {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 868px) {
+    .msg_box {
+        width: 75%;
+        font-size: 15px;
+    }
+    .msg_box header {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 828px) {
+    .msg_box {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .msg_box {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 696px) {
+    .msg_box {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 656px) {
+    .msg_box {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 628px) {
+    .msg_box [name="name"] {
+        width: 10%;
+        cursor: pointer;
+    }
+    .msg_box [name="name"]:focus {
+        width: 20%;
+        background-color: var(--d1A);
+        cursor: text;
+        color: var(--lf);
+    }
+    .msg_box [name="name"]:focus::placeholder {
+        color: rgba(163, 160, 160, 0.652);
+    }
+
+    .msg_box [name="name"]:focus + [name="message"] {
+        width: 60%;
+    }
+    .msg_box button {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .msg_box {
+        font-size: 14px;
+    }
+    .msg_box header {
+        font-size: 11px;
+    }
+    .msg_box input {
+        padding-block: 2%;
+    }
+    .msg_box [name="name"] {
+        width: 5%;
+        color: var(--o3);
+        background-color: var(--o3);
+    }
+    .msg_box [name="name"]::placeholder {
+        color: var(--o3);
+    }
+    .msg_box [name="message"] {
+        width: 75%;
+    }
+    .contaienr button {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 502px) {
+    .msg_box input, .msg_box button {
+        padding-block: 2.5%;
+    }
+}
+@media screen and (max-width: 430px) {
+    .msg_box {
+        font-size: 13px;
+    }
+    .msg_box header {
+        font-size: 10px;
+    }
+    .msg_box input, .msg_box button {
+        padding-block: 3%;
+    }
+}
+@media screen and (max-width: 368px) {
+    .msg_box input, .msg_box button {
+        padding-block: 4%;
+    }
+}
+@media screen and (max-width: 255px) {
+    .msg_box > form {
+        padding-block: 3%;
+    }
+    .msgComponent {
+        width: 60%;
+        margin-block: 8%;
+    }
+    .R {
+        margin-left: 40%;
+    }
+}
